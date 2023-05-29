@@ -1,0 +1,120 @@
+= The three goals to achieve the Java persistence mastering
+:toc: auto
+
+== 1 Business
+
+* The reason that we're coding is the goal.
+
+Software Engineer Definition by  https://www.amazon.com/dp/B0BLXCXT3R/[Modern Software Engineering's] book:
+
+> Software Engineering is the application of an empirical, scientific approach to finding efficient, economic solutions to practical problems in software.
+
+* Rich vs Anemic model
+
+=== DDD
+
+* Bringing the code close to the business.
+* There are tactical and strategic perspectives
+
+* *Strategic*: it's a business language: Bounded Context, ubiquitous language, context Maps.
+* *Tactical*: implementation, classes, and modules.
+
+==== Patterns
+
+* Entities: Anything with continuity through a life cycle and distinctions independent of attributes essential to the application's user.
+* Aggregator:  A DDD aggregate is a cluster of domain objects that can be treated as a single unit.
+* Value Object: Value Object is an object that represents a concept from your problem Domain.
+* Services: is used to perform domain operations and business rules
+* Repository: is used to access data from persistent stores.
+
+==== Books
+
+* https://www.amazon.com.br/dp/1098100131[Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy]
+* https://www.infoq.com/minibooks/domain-driven-design-quickly/[Domain Driven Design Quickly]
+
+=== Understanding and converting to the code
+
+There are several, such as story Storming, Story Mapping, and UML. My favorite one is Domain storytelling.
+
+* https://www.amazon.com.br/dp/0137458916[Domain Storytelling: A Collaborative, Visual, and Agile Way to Build Domain-Driven Software]
+
+The tool: https://egon.io/[Egon.io]
+
+image::storytelling.gif[Library's case]
+
+== 2 Isolation
+
+* We are keeping the business safe from technology.
+
+* Hexagonal architecture
+* Ports and Adaptors
+* https://www.amazon.com/dp/0134494164[Clean Architecture]
+
+=== Abstraction
+
+https://www.amazon.com/dp/B0BR3RXFW2/[Just enough software Architecture: A risk-driven Approach]:
+
+> To be successful at combating the scale and complexity of software in the next decade, developers will need improved weapons... in three categories: partitioning, knowledge, and *abstraction*.
+
+> *Abstraction* can effectively combat complexity and scale because it shrinks problems, and smaller problems are easier to reason about it.
+
+=== Layers, Layers, Layers
+
+* Unstructured Code Monolith
+* Modular Monolith
+* Layered Architecture
+** Mapper
+** DAO
+** Repository
+
+=== When Layer can become an enemy
+
+More code:
+
+* More Work
+* More code to maintain
+* More bugs
+* We're terrible at seeing the future; go to evolutionary architecture instead.
+** Unknown unknowns
+
+== 3 Performance
+
+* Object-relational impedance mismatch
+** Polymorphism, types, conversion, mapper
+** 90% is on that conversion
+
+=== Take advantage of the database
+
+> Hibernate and JPA were designed to work well in combination with handwritten SQL.
+https://www.youtube.com/watch?v=pc6QIwx0EL0[ORM, 20 years later by Gavin King]
+
+* NoSQL
+** Key-value
+** Wide-column
+** Document
+** Graph
+** Time Series
+** Even more
+* SQL
+* NewSQL
+* CAP
+** PACELC
+
+=== Models
+
+https://www.amazon.com/dp/0321826620/[NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence]
+
+=== Challenges (Leak of knowledge)
+
+* Maturity Models
+* Design Patterns
+** Migrations
+* CDC
+
+== Conclusion
+
+Understand the three rules and focus on simplicity.
+
+* https://www.amazon.com/dp/173210221X/[A Philosophy of Software Design]
+
+image::conclusion.jpeg[]
