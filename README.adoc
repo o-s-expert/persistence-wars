@@ -66,10 +66,6 @@ Software Engineer Definition by  https://www.amazon.com/dp/B0BLXCXT3R/[Modern So
 
 * We are keeping the business safe from technology.
 
-* Hexagonal architecture
-* Ports and Adaptors
-* https://www.amazon.com/dp/0134494164[Clean Architecture]
-
 === Abstraction
 
 https://www.amazon.com/dp/B0BR3RXFW2/[Just enough software Architecture: A risk-driven Approach]:
